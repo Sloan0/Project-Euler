@@ -8,24 +8,21 @@ long findSmallestFactor(long number);
 int main(){
     long factorA = 600851475143;
     long factorB;
-    long largestPrimeFactor;
     bool notFound = true;
 
     while (notFound){
         factorB = findSmallestFactor(factorA);
         if(factorB == factorA){
-            largestPrimeFactor = factorA;
             notFound = false;
         }
         else{
-            largestPrimeFactor = factorB;
             factorA = factorA/factorB;
         }
 
 
     }
 
-    cout << largestPrimeFactor << endl;
+    cout << factorA << endl;
     return 0;
 }
 
